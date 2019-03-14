@@ -1,17 +1,28 @@
+/*******************************************************************
+*This is Tiny Kit Lib of TData class that include                  *  
+*some deal with tool with data,can free your heart.                *
+*												--SPeak 2019.3.15  *
+********************************************************************/
+
 #ifndef _TKIT_INCLUDE
 #define _TKIT_INCLUDE
+typedef int * int_ptr;
+typedef char* int_char;
 typedef const char * address_pointer;
 class TData{
 
 public:
-	static void rdata_generator(
-			address_pointer	address,
-		   	const int mix,
-		   	const int max, 
-			const int x = 1, 
-			const int y = 1, 
-			const int z = 1
+	static int rdata(
+			address_pointer	address = rdata_disenable,
+		   	const int mix = 0,
+		   	const int max = 127, 
+			const int length = 1 
 	);
+
+	static void swap(int &a, int &b);
+	static void swap(char &a, char &b);
+private:
+	static constexpr address_pointer rdata_disenable = 0;
 };
 #endif
 

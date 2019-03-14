@@ -1,21 +1,45 @@
+/***************************************************
+ *this is implement of TData class.				****
+ *							--SPeak 2019.3.15	****
+ ***************************************************/
+
 #include<iostream>
 #include<tkit>
 #include<random>
-void TData::rdata_generator(
+#include<ctime>
+void TData::swap(int &a, int &b)
+{
+		//swap int-type
+		a = a + b;
+		b = a - b;
+		a = a - b;
+}
+void TData::swap(char &a, char &b)
+{
+		//swap char-type
+		a = a + b;
+		b = a - b;
+		a = a - b;
+}
+
+int TData::rdata(
 		address_pointer address,
 	   	const int mix,
 	   	const int max, 
-		const int x, 
-		const int y, 
-		const int z
+		const int length
 	)
 {
-	const int length = z*x*y;
-	int* it = (int *)address;
-	std::default_random_engine generator;
+	std::default_random_engine generator(time(0));
 	std::uniform_int_distribution<int> range_number(mix, max);
-	for(int i = 0; i < length; i++, it++ )
-	{
-		*it = range_number(generator);	
+	int begin = range_number(generator);
+	if(address != TData::rdata_disenable)	
+	{	
+		int* it = (int *)address;
+		*it = begin;
+		for(int i = 1; i < length; i++, it++ )
+		{
+			*it = range_number(generator);	
+		}
 	}
+	return begin;	//return first random 'data'
 }

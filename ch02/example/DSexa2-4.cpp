@@ -2,22 +2,29 @@
 #include<list_s.h>
 #include<tkit>
 using namespace std;
+void partition1(SqList * &L)
+{
+	int i = 0, j = L->length - 1;
+	ElemType pivot = L->data[0];
+	while(i < j)
+	{
+		while(i < j && pivot < L->data[j])
+			j--;
+		while(i < j && pivot >= L->data[i])
+			i++;
+		if(i < j)
+			TData::swap(L->data[j], L->data[i]);
+	}
+	TData::swap(L->data[0], L->data[i]);
+}
 int main()
 {
 	SqList *L;
 	int a[100];
-	int b[10][10];
-	TData::rdata_generator((address_pointer)a, 1, 10, 50);
-	TData::rdata_generator((address_pointer)b, 100, 200, 10, 10);
-	CreateList(L, a, 49);
-	cout << "len: "<< L->length << endl;
+	TData::rdata((address_pointer)a, 0, 20, 100);
+	CreateList(L, a, 40);
 	DispList(L);
-	cout << "test rdata " << endl;
-	for(int i = 0; i < 10; i++)
-	{
-		for(int j = 0; j < 10; j++)
-			cout << b[i][j] << " ";
-		putchar('\n');
-	}
+	partition1(L);
+	DispList(L);
 	return 0;
 }
