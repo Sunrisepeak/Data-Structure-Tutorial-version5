@@ -44,11 +44,12 @@ int main()
 	cout << "partition1: " << L->data[0]<<endl;
 	partition1(L);
 	DispList(L);
-
+	DestoryList(L);
 	
 	CreateList(L, a, 40);
 	cout << "partition2: " << L->data[0]<<endl;
 	partition2(L);
 	DispList(L);
+	DestoryList(L);
 	return 0;
 }

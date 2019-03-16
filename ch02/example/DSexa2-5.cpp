@@ -41,10 +41,12 @@ int main()
 	cout << "move1: " << endl;
 	move1(L);
 	DispList(L);
+	DestoryList(L);
 
 	CreateList(L, a, 50);
 	cout << "move2: " << endl;
 	move2(L);
 	DispList(L);
+	DestoryList(L);
 	return 0;
 }
