@@ -33,4 +33,11 @@
 
 #makefile
 makefile-*
-makefile_*
+makefile*
+
+#swap file
+*.swap
+
+#i/o of data
+*.in
+*.out

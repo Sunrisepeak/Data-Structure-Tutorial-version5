@@ -6,9 +6,9 @@
 
 #ifndef _TKIT_INCLUDE
 #define _TKIT_INCLUDE
-typedef int * int_ptr;
+typedef int* int_ptr;
 typedef char* int_char;
-typedef const char * address_pointer;
+typedef const char* address_pointer;
 class TData{
 
 public:
