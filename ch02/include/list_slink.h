@@ -6,6 +6,9 @@ typedef struct LNode
 	ElemType data;
 	struct LNode* next;
 }LinkNode;
+
+void InitList(LinkNode * &L);
+
 //Head insert
 void CreateListF(LinkNode * &L, ElemType a[], int n);
 
@@ -17,4 +20,11 @@ void DispList(LinkNode * L);
 
 //Destroy List
 void DestroyList(LinkNode * L);
+
+bool ListEmpty(LinkNode *L);
+
+int ListLength(LinkNode *L);
+
+bool GetElem(LinkNode *L, int i, ElemType &e);
+
 #endif

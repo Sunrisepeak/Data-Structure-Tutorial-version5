@@ -37,3 +37,46 @@ void DestroyList(LinkNode *L)
 	}
 	free(L);
 }
+
+void InitList(LinkNode * &L)
+{
+	L = (LinkNode *)malloc(sizeof(LinkNode));
+	L->next = NULL;		//create head_node and set NULL to its next
+}
+
+bool ListEmpty(LinkNode *L)
+{
+	return L->next == NULL;
+}
+
+int ListLength(LinkNode *L)
+{
+	LinkNode *p = L->next;
+	int n = 0;
+	while(p != NULL)
+	{
+		n++;
+		p = p->next;
+	}
+	return n;
+}	
+
+bool GetElem(LinkNode *L, int i, ElemType &e)
+{
+	if(i < 1)	//linklist, only jugde its low 
+		return false;
+	LinkNode *p = L;
+	int j = 0;
+	while(j < i && p != NULL)
+	{
+		j++;
+		p = p->next;
+	}
+	if(p == NULL)
+		return false;
+	e = L->data;
+	return true;
+}
+
+
+
