@@ -78,5 +78,44 @@ bool GetElem(LinkNode *L, int i, ElemType &e)
 	return true;
 }
 
+int LocateElem(LinkNode *L, ElemType e)
+{
+	LinkNode *p = L->next;
+	int k = 1;
+	while(p != NULL && p->data != e)
+	{
+		p = p->next;
+		k++;
+	}
+	if(p == NULL)
+		return 0;
+	else
+		return k;
+}
+
+bool ListInsert(LinkNode * &L, int i, ElemType e)
+{
+	if(i < 1)
+		return false;
+	LinkNode *p = L;
+	int k = 0;
+	while(k < i - 1 && p != NULL)
+	{
+		p = p->next;
+		k++;
+	}
+	if(p == NULL)
+		return false;
+	else
+	{
+		LinkNode *s = (LinkNode *)malloc(sizeof(LinkNode));
+		s->data = e;
+		s->next = p->next;
+		p->next = s;
+		return true;
+	}
+}
+
+
 
 
