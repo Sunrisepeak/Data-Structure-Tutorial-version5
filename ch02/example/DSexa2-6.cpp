@@ -30,7 +30,7 @@ int main()
 //	split(L, (LinkNode*)&L1, (LinkNode*)&L1)  // 这里不能定义传内存中没有的强制类型的地址指针，因为引用的必须是个对象(内存中存在)	
 	LinkNode *L1, *L2;
 	split(L, L1, L2); 
-	DispList((LinkNode*)&L1);
-	DispList((LinkNode*)&L2);
+	DispList(L1);
+	DispList(L2);
 	return 0;
 }
