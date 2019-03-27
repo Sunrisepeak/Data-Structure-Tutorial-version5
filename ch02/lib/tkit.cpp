@@ -23,7 +23,7 @@ void TData::swap(char &a, char &b)
 }
 
 int TData::rdata(
-		address_pointer address,
+		void* address,
 	   	const int mix,
 	   	const int max, 
 		const int length

@@ -13,7 +13,7 @@ class TData{
 
 public:
 	static int rdata(
-			address_pointer	address = rdata_disenable,
+			void* address,
 		   	const int mix = 0,
 		   	const int max = 127, 
 			const int length = 1 
