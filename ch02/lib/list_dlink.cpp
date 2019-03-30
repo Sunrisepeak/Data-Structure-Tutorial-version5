@@ -19,3 +19,19 @@ void CreateListF(DLinkNode * &L, ElemType a[], int n)
 	}
 }
 
+void CreateListR(DLinkNode * &L, ElemType a[], int n)
+{
+	DLinkNode *s, *r;
+	L = (DLinkNode *)malloc(sizeof(DLinkNode));
+	L->next = L->prior = NULL;
+	r = L;
+	for(int i = 0; i < n; i++)
+	{
+		s = (DLinkNode *)malloc(sizeof(DLinkNode));
+		s->data = a[i];
+		r->next = s;
+		s->prior = r;
+		r = s;
+	}
+	r->next = NULL;
+}

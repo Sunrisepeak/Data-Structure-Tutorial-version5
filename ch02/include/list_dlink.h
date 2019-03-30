@@ -6,9 +6,11 @@ struct DNode{
 	ElemType data;
 	struct DNode *prior;
 	struct DNode *next;
-}
+};
 
 void CreateListF(DLinkNode * &L, ElemType a[], int n);
+
+void CreateListR(DLinkNode * &L, ElemType a[], int n);
 
 
 #endif

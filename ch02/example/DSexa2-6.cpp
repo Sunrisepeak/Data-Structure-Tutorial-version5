@@ -1,5 +1,5 @@
 #include<iostream>
-#include<list_slink.h>
+#include<list_sdlink.h>
 #include<malloc.h>
 void split(LinkNode * &L, LinkNode * &L1, LinkNode * &L2)
 {

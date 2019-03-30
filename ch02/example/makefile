@@ -21,7 +21,8 @@ INC = -I../include
 LIBS = ../lib/list*.cpp
 
 all:$(OBJS)
-	$(CC) $(CFLAGS) $(OBJS)  -o $(EXEC) $(LFLAGS)
+	$(CC) $(CFLAGS) \
+	$(OBJS) -o $(EXEC) $(LFLAGS)
 
 $(OBJS): %.o:%.cpp 				 #use '.o' to replace '.cpp' value of OBJS variable
 	$(CC) -c  $(INC) $^ $(CFLAGS) -o $@
