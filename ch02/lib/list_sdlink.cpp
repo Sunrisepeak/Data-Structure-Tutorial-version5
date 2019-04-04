@@ -7,9 +7,9 @@
 #include<iostream>
 #include<malloc.h>
 
-void DispList(LinkNode *L)
+void DispList(void *L)		//disp of list_dlink and list_slink
 {
-	LinkNode *p = L->next;
+	LinkNode *p = ((LinkNode *)L)->next;
 	while(p != NULL)
 		{
 			printf("%d ", p->data);

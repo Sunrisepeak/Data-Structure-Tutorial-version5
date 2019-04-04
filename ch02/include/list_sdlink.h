@@ -9,8 +9,10 @@
 
 #include<list_slink.h>
 #include<list_dlink.h>
+
+
 //Display List
-void DispList(LinkNode * L);
+void DispList(void* L);
 
 //Destroy List
 void DestroyList(LinkNode * L);
