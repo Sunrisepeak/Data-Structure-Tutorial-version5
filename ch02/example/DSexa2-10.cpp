@@ -1,5 +1,5 @@
 #include<iostream>
-#include<list_sdlink.h>
+#include<list.h>
 #include<tkit>
 using namespace std;
 void sort(DLinkNode * &L)

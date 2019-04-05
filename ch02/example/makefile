@@ -3,7 +3,7 @@
 #								---SPeak 2019.2.25
 CC = g++                            #complier
 #SRCS = list_s.cpp list_tst.cpp   #source file
-SRCS = $(wildcard ../lib/*.cpp) DSexa2-10.cpp #use function about wildcard get cpp
+SRCS = $(wildcard ../lib/*.cpp) DSexa2-11.cpp #use function about wildcard get cpp
 
 #OBJS = $(SRCS:.cpp=.o)             #object file
 OBJS = $(patsubst %.cpp, %.o,$(SRCS))

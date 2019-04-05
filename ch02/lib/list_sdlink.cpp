@@ -10,7 +10,7 @@
 void DispList(void *L)		//disp of list_dlink and list_slink
 {
 	LinkNode *p = ((LinkNode *)L)->next;
-	while(p != NULL)
+	while(p != L&&p != NULL)
 		{
 			printf("%d ", p->data);
 			p = p->next;

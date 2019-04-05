@@ -1,6 +1,5 @@
-#ifndef LIST_SLINK_INCLUDE
-#define LIST_SLINK_INCLUDE
-
+#ifndef CSLLISt_INCLUDE
+#define CSLLISt_INCLUDE
 typedef int ElemType;
 typedef struct CSLNode
 {
