@@ -11,8 +11,7 @@ void CreateListF(CDLList * &L, ElemType a[], int n)
 		s = (CDLList *)malloc(sizeof(CDLList));
 		s->data = a[i];
 		s->next = L->next;
-		if(L->next != L)
-			L->next->prior = s;
+		L->next->prior = s;
 		L->next = s;
 		s->prior = L;
 	}
@@ -33,5 +32,6 @@ void CreateListR(CDLList * &L, ElemType a[], int n)
 		r = s;
 	}
 	r->next = L;
+	L->prior = r;
 }
 
