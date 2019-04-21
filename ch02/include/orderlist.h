@@ -1,3 +1,10 @@
+/*
+
+this data structure of  order list is base on squence list and single link
+ 
+ */
+
+
 #ifndef ORDERLIST_INCLUDE
 #define ORDERLIST_INCLUDE
 
